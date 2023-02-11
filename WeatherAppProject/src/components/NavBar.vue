@@ -1,20 +1,30 @@
-<script setup>
-    import {RouterLink, RouterView} from 'vue-router'
-</script>
-
 <template>
     <div class="navbar bg-base-100">
         <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl">Lucas WeatherApp</a>
+            <router-link to="/">
+                <a class="btn btn-ghost normal-case text-xl"
+                    >Lucas WeatherApp</a
+                >
+            </router-link>
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
+                <li>
+                    <router-link to="/">
+                        <a>Home</a>
+                    </router-link>
+                </li>
                 <li tabindex="0">
-                    <a> Check the weather </a>
+                    <RouterLink to="WeatherPage">
+                        <a> Check the weather </a>
+                    </RouterLink>
                 </li>
             </ul>
         </div>
     </div>
-    <RouterView/>
+    <RouterView />
 </template>
+
+<script setup>
+    import { RouterLink, RouterView } from 'vue-router'
+</script>

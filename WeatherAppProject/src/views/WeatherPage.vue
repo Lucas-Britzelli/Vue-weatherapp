@@ -1,15 +1,18 @@
 <template>
     <div class="WeatherPage">
-        <h1>This is my weatherpage</h1>
+        <NavBar />
+        <div class="WeatherPage-content">
+            <DynamicWeather />
+        </div>
     </div>
 </template>
-
-<style>
-    @media (min-width: 1024px) {
-        .about {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+<script>
+    import NavBar from '../components/NavBar.vue'
+    import DynamicWeather from '../components/DynamicWeather.vue'
+    export default {
+        components: {
+            NavBar,
+            DynamicWeather
         }
     }
-</style>
+</script>
