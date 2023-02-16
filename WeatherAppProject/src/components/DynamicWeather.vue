@@ -1,5 +1,6 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
+import axios from 'axios';
 </script>
 
 <template>
@@ -76,7 +77,6 @@ import { useCounterStore } from '@/stores/counter';
 </template>
 
 <script>
-import axios from 'axios';
 export default {
   data() {
     return {
