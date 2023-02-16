@@ -61,14 +61,16 @@ import axios from 'axios';
         <div class="stat">
           <div class="stat-title">Total Amount Of Times Used</div>
           <div class="stat-value">{{ useCounterStore().count }}</div>
-        </div>
-      </div>
-      <div class="stats shadow">
-        <div class="stat">
-          <div class="stat-title">Distance (in km) from Stockholm</div>
-          <div class="stat-value">{{ distance }}</div>
-          <div class="stat-desc">
-            This only works for cities with names longer than 5 characters
+          <div>
+            <div class="stat">
+              <div class="stat-title">
+                Distance from Stockholm in a straight line
+              </div>
+              <div class="stat-value">{{ distance }} Km</div>
+              <div class="stat-desc">
+                This only works for cities with names longer than 5 characters
+              </div>
+            </div>
           </div>
         </div>
       </div>
